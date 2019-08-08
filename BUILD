@@ -2,7 +2,9 @@ cc_library(
     name = "usecurl",
     srcs = ["usecurl.cc"],
     hdrs = ["usecurl.h"],
-    deps = ["@curl//:curl"],
+    linkopts = [
+        "-lcurl",
+    ],
 )
 
 cc_binary(
